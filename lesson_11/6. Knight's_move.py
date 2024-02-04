@@ -1,4 +1,4 @@
-# Функция вывода игрового поля
+# Функция вызыва графического поля
 def graficBoardImput (axis_x, axis_y):
     chess_square = "|_|"
     horse = "|N|"
