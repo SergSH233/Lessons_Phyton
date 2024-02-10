@@ -24,41 +24,43 @@ def NewList_Int(size):
         list.append(elem)
     return list
 
+# Готовые примеры для проверки Метода
 
 # Числовые листы
-# list_1 = [12,89,9,135,19,109,135,76]
-# list_2 = [90,31,30,87,19,109,14,34,98,15]
+list_1 = [12,89,9,135,19,109,135,76]
+list_2 = [90,31,30,87,19,109,14,34,98,15]
+
 # Введенные с консоли
 # print("list 1")
 # list_1 = NewList_Int(5)
 # print("list 2")
 # list_2 = NewList_Int(3)
+
 # Строчные листы
 # list_1 = ["Форд","Фольцваген","Вольво","Фиат","Рено"]
 # list_2 = ["Тойота","Хонда","Хендай","Вольво","Форд","Ситроен"]
+
 # Введенные с консоли
-list_1 = NewList_Str(5)
+# list_1 = NewList_Str(5)
 # list_2 = NewList_Str(3)
 
 
 # Пустой лист
-list_2 = []
+# list_2 = []
 
 
 def UniqueCombinatonSortList(List_1, List_2):
-    list_1.extend(list_2)
-    # print("|debug|merge =",list_1)
-    list_1.sort()
-    # print("|debug|sort =", list_1)
+    List_1.extend(List_2)
+    List_1.sort()
     duble = []
-    for x in range(len(list_1) - 1):
-        elem_1 = list_1[x]
-        elem_2 = list_1[x + 1]
+    for x in range(len(List_1) - 1):
+        elem_1 = List_1[x]
+        elem_2 = List_1[x + 1]
         if elem_1 == elem_2:
             duble.append(elem_2)
     for x in range(len(duble)):
-        list_1.remove(duble[x])
-    return list_1
+        List_1.remove(duble[x])
+    return List_1
 
 
 # Решение задачи
