@@ -56,7 +56,6 @@ while True:
                     calc += 1
                 print("Итог:", total_sum,"руб")
                 shop_total = shop_total + total_sum
-                print("debug shop total", shop_total)
                 calc = 0
                 break
     elif key == "2":
