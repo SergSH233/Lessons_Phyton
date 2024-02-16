@@ -21,10 +21,12 @@ def NewList_Str(size):
 # players = ["Леня","Фима","Варя","Вася","Кирилл"]
 players = ["1", "2", "3", "4", "5"]
 counting = int(input("Введите кол-во слов в считалке: "))
+calc = 0
 while len(players) > 1:
-    calc = 1
-    indPl = (calc + counting - 1) % len(players) - 1
+    print("Debug Calc",calc)
+    indPl = (calc + counting) % len(players)
+    print("DeBug index",indPl)
     print("Выбывает:",players[indPl])
     players.remove(players[indPl])
-    calc = indPl
+    calc = calc + indPl
 print("Последним остался: ",players)
