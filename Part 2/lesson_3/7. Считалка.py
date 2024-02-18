@@ -7,26 +7,27 @@
 # 5. Создать метод для удаления элементов из списка.
 # 6. Вывести оставшихся игроков.
 
-def NewList_Str(size):
-    print("Введите имена",size,"участников")
-    list = []
-    for _ in range(size):
-        elem = input("Введите новые имя: ")
-        list.append(elem)
-    return list
+def NewList_Str():
+    print("Введите имена участников! Для завершения ввода введите команду end")
+    new_list = []
+    while True:
+        print("Для завершения заполнения списка введите команду end")
+        name = input("Введите имя участника: ")
+        if name == "end":
+            break
+        else:
+            new_list.append(name)
+    return new_list
 
-
-# size = int(input("Введите количество участников: "))
-# players = NewList_Str(size)
-# players = ["Леня","Фима","Варя","Вася","Кирилл"]
-players = ["1", "2", "3", "4", "5"]
+players = NewList_Str()
+print("Участники: ",players)
 counting = int(input("Введите кол-во слов в считалке: "))
 calc = 0
+indPl = 0
 while len(players) > 1:
-    print("Debug Calc",calc)
-    indPl = (calc + counting) % len(players)
-    print("DeBug index",indPl)
+    calc = calc + indPl
+    indPl = (calc + counting - 1) % len(players)
     print("Выбывает:",players[indPl])
     players.remove(players[indPl])
-    calc = calc + indPl
+    calc = 0
 print("Последним остался: ",players)
