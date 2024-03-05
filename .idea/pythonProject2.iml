@@ -12,7 +12,7 @@
     <content url="file://D:/Setup/Python/Lib/site-packages">
       <sourceFolder url="file://D:/Setup/Python/Lib/site-packages" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12" jdkType="Python SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

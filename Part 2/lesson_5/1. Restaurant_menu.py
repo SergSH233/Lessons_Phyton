@@ -10,5 +10,4 @@ while True:
 format_menu = text_data.split(";")
 print(format_menu)
 new_menu = ", ".join(format_menu)
-# new_menu = [",".join(x) for x in format_menu]
 print(new_menu)
