@@ -6,11 +6,10 @@ print(nums)
 nums_t = tuple(nums)
 keys = ("d","t","p","x","o")
 
-if len(nums_t) <= len(keys):
-    lengue = len(nums_t)
-else:
-    lengue = len(keys)
+lengue = min(len(nums_t),len(keys))
 
-for num in range(lengue):
-    ziper = (keys[num],nums_t[num])
-    print(ziper)
+ziper = ((keys[num],nums_t[num]) for num in range(lengue))
+
+print(ziper)
+for key, num in ziper:
+    print(key,num)

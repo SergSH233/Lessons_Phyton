@@ -30,6 +30,8 @@ while True:
         new_client = []
         total_sum = 0
         while True:
+            for goods in range(len(shop_list)):
+                print(shop_list[goods][0],":", shop_list[goods][1],"руб")
             product = input("Введите наименование товара: ").lower()
             for i in range(len(shop_list)):
                 for j in range(len(shop_list[i])):
