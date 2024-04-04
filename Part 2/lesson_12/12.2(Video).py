@@ -2,8 +2,8 @@ class Person:
     __count = 0  # двойное нижнее подчеркивание изменяет наш параметр из публичного в приватный
 
     def __init__(self, name, age):
-        self.set_name(name)
-        self.set_age(age)
+        self.__name = self.set_name(name)
+        self.__age = self.set_age(age)
         Person.__count += 1
 
     def __str__(self):
@@ -31,7 +31,7 @@ class Person:
         return self.__name
 
 
-misha = Person("Vova", 23)
+misha = Person("Vova", 15)
 tomas = Person("Tomas", 25)
 print(misha.get_count())
 new_age = 50
