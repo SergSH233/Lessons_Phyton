@@ -1,0 +1,5 @@
+
+FileNotFoundError - Файл не найден
+FileNotFoundError - Файл не найден
+BaseException - Длинна 0 строки меньше 3-х символов
+BaseException - Длинна 1 строки меньше 3-х символов
