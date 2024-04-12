@@ -1,6 +1,6 @@
 class Property:
     def __init__(self, cost):
-        self.__cost = self.set_coast(cost)
+        self.set_coast(cost)
 
     def get_cost(self):
         return self.__cost
@@ -33,7 +33,7 @@ class Car(Property):
         super().__init__(cost)
         self.brand = brand
         self.model = model
-        self.year = self.set_year(year)
+        self.set_year(year=year)
 
     def set_year(self, year):
         if year <= 1901:
@@ -41,7 +41,14 @@ class Car(Property):
         else:
             self.year = year
 
+    def __str__(self):
+        return "Brand: {brand}\t Model: {model}\nYear: {year}\nCost: {cost}".format(
+            brand=self.brand,
+            model=self.model,
+            year=self.year,
+            cost=self.get_cost()
+        )
 
 
-car1 = Car(cost=4000, brand="mazda", model="xedos 6", year=1901)
-
+car1 = Car(cost=4000, brand="Mazda", model="Xedos 6", year=1995)
+print(car1)
